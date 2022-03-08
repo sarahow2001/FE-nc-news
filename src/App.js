@@ -1,12 +1,11 @@
-
-import './App.css';
+import Title from "./components/Title";
+import ArticleList from "./components/articleList";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-   
-      </header>
+      <ArticleList></ArticleList>
     </div>
   );
 }
