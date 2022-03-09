@@ -7,7 +7,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Title from './Title'
+
 
 export default function ArticleCard ({article}){
     
@@ -16,7 +16,7 @@ export default function ArticleCard ({article}){
         <Card sx={{ minWidth: 275 }}>
             <div>
       <CardContent>
-        <Title></Title>
+     
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {article.title}
         </Typography>

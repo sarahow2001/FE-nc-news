@@ -1,7 +1,7 @@
 import {useEffect,useState} from "react"
 import {getAllArticles} from "../api"
 import ArticleCard from "./articleCard"
-
+import Title from "./Title"
 
 export default function ArticleList(){
     const [articles,setArticles]=useState([])
@@ -14,13 +14,18 @@ getAllArticles().then((allArticles)=>{
 
 
   return (
+      <section>
+      <Title></Title>
 <ul>
 {articles.map(article => {
-    return <li key={article.article_id}>
+    return(
+
+     <li key={article.article_id}>
         <ArticleCard article={article} ></ArticleCard>
     </li>
-})}
+)})}
 </ul>
+</section>
  )
 
 }
