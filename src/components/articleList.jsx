@@ -1,16 +1,20 @@
+import { Axios } from "axios"
 import {useEffect,useState} from "react"
 import {getAllArticles} from "../api"
 import ArticleCard from "./articleCard"
 import Title from "./Title"
+import {useParams} from "react-router-dom"
 
 export default function ArticleList(){
     const [articles,setArticles]=useState([])
-
+    const {topic} = useParams();
+    console.log(topic)
 useEffect(() => {
-getAllArticles().then((allArticles)=>{
+getAllArticles(topic).then((allArticles)=>{
+  
     setArticles(allArticles)
 })
-},[])
+},[topic])
 
 
   return (
