@@ -7,10 +7,11 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 
 export default function ArticleCard ({article}){
-    
+ 
 
     return (
         <Card sx={{ minWidth: 275 }}>
@@ -20,20 +21,20 @@ export default function ArticleCard ({article}){
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           {article.title}
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography variant="" component="div">
        {article.topic}
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
          
         </Typography>
         <Typography variant="body2">
-          well meaning and kindly.
+          votes:{article.votes}
           <br />
-          {'"a benevolent smile"'}
+          {article.author}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+      <Link to ={`/articles/article/${article.article_id}`}> <Button size="small" >View Article</Button></Link>
       </CardActions>
       </div>
     </Card>

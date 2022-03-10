@@ -18,3 +18,14 @@ export const getTopics = () => {
       return response.data.topics;
     });
 };
+
+export const getSingleArticle = (id) => {
+  return axios
+    .get(
+      `https://nc-news-example-seminar-3-15.herokuapp.com/api/articles/${id}`
+    )
+
+    .then((res) => {
+      return res.data.article;
+    });
+};

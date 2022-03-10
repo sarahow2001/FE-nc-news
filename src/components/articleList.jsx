@@ -1,4 +1,4 @@
-import { Axios } from "axios"
+
 import {useEffect,useState} from "react"
 import {getAllArticles} from "../api"
 import ArticleCard from "./articleCard"
@@ -8,7 +8,7 @@ import {useParams} from "react-router-dom"
 export default function ArticleList(){
     const [articles,setArticles]=useState([])
     const {topic} = useParams();
-    console.log(topic)
+   
 useEffect(() => {
 getAllArticles(topic).then((allArticles)=>{
   
@@ -16,11 +16,10 @@ getAllArticles(topic).then((allArticles)=>{
 })
 },[topic])
 
-
   return (
       <section>
       <Title></Title>
-<ul>
+
 {articles.map(article => {
     return(
 
@@ -28,7 +27,6 @@ getAllArticles(topic).then((allArticles)=>{
         <ArticleCard article={article} ></ArticleCard>
     </li>
 )})}
-</ul>
 </section>
  )
 

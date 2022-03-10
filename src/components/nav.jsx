@@ -1,4 +1,4 @@
-import  {getAllArticles , getTopics} from "../api"
+import  {getTopics,getAllArticles} from "../api"
 import {useEffect,useState} from 'react'
 import { Link } from "react-router-dom";
 
@@ -15,11 +15,12 @@ export default function NavBar (){
  },[])
  return (
      <div> 
-            <Link  to={`/articles`} >HOME</Link>
-     {topics.map((topic) => {
-        return (
-             <Link key={topic.slug} to={`/articles/${topic.slug}`} >{topic.slug}</Link>
-             
+         <Link  to={`/articles`} >HOME</Link>
+         <br />
+     {topics.map((topic) => { 
+         
+         return (
+             <Link key={topic.slug} to={`/articles/${topic.slug}`} >{topic.slug}</Link> 
              )
       })}
     </div>

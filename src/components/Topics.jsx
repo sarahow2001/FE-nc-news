@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'reacr'
+import {useEffect,useState} from 'react'
 import {getTopics} from "../api"
 import ArticleCard from "./articleCard"
 
@@ -16,13 +16,10 @@ useEffect(() =>{
   
 
  return (
-
-
     <ul>
 {topics.map(topic => {
    
     return(
-
          <li key={topics}>
            <ArticleCard topic={topics} ></ArticleCard>
         </li>
