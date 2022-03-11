@@ -31,7 +31,7 @@ export default function SingleArticle(){
         <p>{article.author}</p>
         
         <Votes votes={article.votes} id={article.article_id}/>
-        {console.log(article.votes)}
+        
      
       </section>
     )
