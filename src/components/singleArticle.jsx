@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import {useEffect, useState} from "react"
-import {getSingleArticle} from "../api.js"
+import {getSingleArticle,updateVotes} from "../api.js"
+import Votes from "./votes"
+// import ViewComment from "./comments.jsx";
+
 export default function SingleArticle(){
 
- console.log("anything")
 
      const {id} = useParams();
      const [article , setArticle]=useState();
@@ -25,11 +27,16 @@ export default function SingleArticle(){
         <p>{article.topic}</p>
         <p>{article.body}</p>
         <br></br>
-        <p>{article.votes}</p>
+        
         <p>{article.author}</p>
+        
+        <Votes votes={article.votes} id={article.article_id}/>
+        {console.log(article.votes)}
+     
       </section>
     )
-
-   }
-   
+    
+    
+}
+  
 }

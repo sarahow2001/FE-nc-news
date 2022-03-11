@@ -1,7 +1,7 @@
 export default function  Title() {
     return (
    
-         <h1>NC-News</h1>  
+         <h1>News</h1>  
      )
 
 }

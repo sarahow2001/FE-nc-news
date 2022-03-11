@@ -29,3 +29,12 @@ export const getSingleArticle = (id) => {
       return res.data.article;
     });
 };
+
+export const updateVote = (id, votes) => {
+  return axios.patch(
+    `https://nc-news-example-seminar-3-15.herokuapp.com/api/articles/${id}`,
+    {
+      inc_votes: votes,
+    }
+  );
+};
