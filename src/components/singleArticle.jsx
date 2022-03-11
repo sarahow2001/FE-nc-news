@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import {useEffect, useState} from "react"
-import {getSingleArticle,updateVotes} from "../api.js"
+import {getSingleArticle,updateVotes, getComments} from "../api.js"
 import Votes from "./votes"
+import ViewComment from "./comments.jsx";
 // import ViewComment from "./comments.jsx";
 
 export default function SingleArticle(){
@@ -31,7 +32,10 @@ export default function SingleArticle(){
         <p>{article.author}</p>
         
         <Votes votes={article.votes} id={article.article_id}/>
-        
+        <ViewComment/>
+        {/* 1) state for keeping the comments
+        2) use effect to fetch the comment from the api 
+        3) map over the comments to render them  */}
      
       </section>
     )

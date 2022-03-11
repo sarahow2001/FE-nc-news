@@ -7,7 +7,7 @@ export default function Topics(){
   const [topics , setTopics]=useState([])
 
 
-useEffect(() =>{
+    useEffect(() => {
      getTopics().then((allTopics)=>{
          setTopics(allTopics)
          
