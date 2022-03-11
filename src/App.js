@@ -4,16 +4,17 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/nav";
 import SingleArticle from "./components/singleArticle";
+
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-      <ButtonAppBar></ButtonAppBar>
-         <NavBar />
+        <ButtonAppBar />
+        <NavBar />
         <Routes>
-          <Route path="/articles" element={<ArticleList />}></Route>
-          <Route path="/articles/:topic" element={<ArticleList />}></Route>
-          <Route path="/articles/article/:id" element={<SingleArticle />}></Route>
+          <Route path="/articles" element={<ArticleList />} />
+          <Route path="/articles/:topic" element={<ArticleList />} />
+          <Route path="/articles/article/:id" element={<SingleArticle />} />
         </Routes>
       </div>
     </BrowserRouter>

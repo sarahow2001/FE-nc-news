@@ -18,7 +18,7 @@ export default function ArticleCard ({article}){
             <div>
       <CardContent>
      
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 15}} color="text.secondary" gutterBottom>
           {article.title}
         </Typography>
         <Typography variant="" component="div">
